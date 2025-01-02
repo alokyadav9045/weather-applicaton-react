@@ -1,0 +1,12 @@
+.SearchBox{
+    text-align: center;
+}
+.SearchBox{
+    text-align: center;
+    align-items: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+#city{
+    width: 300px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
