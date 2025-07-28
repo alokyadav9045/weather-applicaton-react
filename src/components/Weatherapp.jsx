@@ -184,7 +184,7 @@ export default function WeatherApp() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Rao Alok Yadavv
+            Alok Yadavv
           </a>
         </p>
       </footer>
