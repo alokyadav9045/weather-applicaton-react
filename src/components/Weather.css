@@ -1,0 +1,218 @@
+/* Root Theme Colors */
+:root {
+  --light-bg: #e6f2ff;
+  --light-text: #2c3e50;
+  --dark-bg: #0e0e17;
+  --dark-text: #f0f0f0;
+  --accent-blue: #4da6ff;
+  --accent-orange: #ff9800;
+  --card-light: #ffffff;
+  --card-dark: #1f1f2b;
+  --glass-dark: rgba(255, 255, 255, 0.05);
+  --glass-light: rgba(255, 255, 255, 0.7);
+  --border-dark: rgba(255, 255, 255, 0.2);
+}
+
+/* Theme Base */
+body.light {
+  background: var(--light-bg);
+  color: var(--light-text);
+}
+
+body.dark {
+  background: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+/* App Container */
+.weather-app {
+  max-width: 540px;
+  margin: auto;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-family: "Segoe UI", sans-serif;
+  transition: background 0.4s, color 0.4s;
+}
+
+/* Header */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app-header h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.theme-toggle {
+  background: transparent;
+  border: 2px solid currentColor;
+  padding: 0.5rem 1rem;
+  margin : 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background: var(--glass-dark);
+}
+
+/* Search Section */
+.search-form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.search-input {
+  flex: 1;
+  padding: 0.65rem 1rem;
+  border: 2px solid #bbb;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.search-btn {
+  background-color: var(--accent-blue);
+  color: white;
+  border: none;
+  padding: 0.65rem 1.2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-btn:hover {
+  background-color: #1a8cff;
+}
+
+.error-msg {
+  margin-top: 0.5rem;
+  color: #ff4c4c;
+  font-weight: 500;
+}
+
+/* Weather Card */
+.weather-card {
+  background: var(--glass-light);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 1.8rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s, color 0.3s;
+  border: 1px solid var(--border-dark);
+}
+
+body.dark .weather-card {
+  background: var(--glass-dark);
+}
+
+/* Weather Info */
+.card-header h2 {
+  font-size: 1.6rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.card-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.icon {
+  font-size: 3rem !important;
+}
+
+.icon.sunny {
+  color: #ffc107;
+}
+
+.icon.rain {
+  color: #2196f3;
+}
+
+.icon.cloud {
+  color: #90a4ae;
+}
+
+.icon.snow {
+  color: #80dfff;
+}
+
+.condition-text {
+  text-align: center;
+  font-style: italic;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Weather Details */
+.card-footer {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.8rem;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+/* Speak Button */
+.speak-btn {
+  background-color: var(--accent-orange);
+  border: none;
+  padding: 0.6rem 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1.2rem;
+  transition: background-color 0.3s ease;
+  color: #fff;
+}
+
+.speak-btn:hover {
+  background-color: #ff6f00;
+}
+
+/* Footer */
+.app-footer {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  opacity: 0.8;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+p{
+  font-size: 1.2rem;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .search-form {
+    flex-direction: column;
+  }
+
+  .card-body {
+    flex-direction: column;
+  }
+
+  .app-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .theme-toggle {
+    width: 100%;
+  }
+}

@@ -1,16 +1,12 @@
 import './App.css';
-// import "./SearchBox";
-// import SearchBox from './SearchBox';
-import Weatherapp from "./weatherapp";
+import WeatherApp from './components/WeatherApp';
 
-function App()
-{
-
+function App() {
   return (
-    <>
-    <Weatherapp />
-    </>
-  )
+    <div className="app-root">
+      <WeatherApp />
+    </div>
+  );
 }
 
 export default App;
